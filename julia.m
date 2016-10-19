@@ -1,10 +1,6 @@
 function M = julia(zMax, c , N)
-     real = randi([0 zMax], 500);
-     im = randi([0 zMax], 500)*1i;
-     Z = real + im + li;
-     plot(z,'o');
-     M = zeros 
-     
-     
+     [x,y] = meshgrid(linspace(-zMax,zMax,500),zeros(1,500));
+     Z = x + 1i*x';
+     M=reshape(escapeVelocity(Z(:), c, N),500,500);
      
 end
